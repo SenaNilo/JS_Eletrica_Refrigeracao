@@ -1,0 +1,800 @@
+/* Font: Russo One e Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-font: "Russo One", sans-serif;
+    --text-font: "Nunito", sans-serif;
+	--first-color: #F29F05; /*#FFA805;*/
+    --second-color:#52B5F2; /* #52B5F2  05B8F2; */
+	--third-color: #FFD22A;
+	--fourth-color: #FF6D24;
+    --fifth-color: #FF5B21;
+    /*  
+        cinza pro azul: #2A3133 (monocromático)
+        cinza pro amarelo: #33302A     
+    */
+    --black: #000;
+    --white: #fff;
+
+    --swiper-theme-color: var(--fifth-color);
+    --swiper-pagination-bullet-inactive-color: var(--fourth-color);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--text-font);
+    overflow-x: hidden;
+}
+main{
+    background-color: white;
+}
+h1, h2{
+    font-family: var(--main-font);
+}
+
+/* #region Header */
+header{
+    background: linear-gradient(#000, transparent);
+    font-family: var(--main-font);
+    display: flex;
+    padding: 1rem;    
+    color: var(--second-color);
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    min-height: 85px;    
+    width: 100vw;
+    padding: 1rem 1.7rem 1rem 1rem;
+    position: fixed;
+    z-index: 2;
+    transition: 0.5s all;
+}
+header.ativo{
+    background: linear-gradient(to left, #000, transparent);
+    background-size: 600%;
+    animation: backAnim  0.6s ease-out forwards;
+    /* background:  linear-gradient(#000, #000); */
+}
+header .menu-mobile{
+    display: none;
+    cursor: pointer;
+}
+header .menu-mobile div{
+    width: 32px;
+    height: 3.5px;
+    border-radius: 10px;
+    background: #fff;
+    margin: 6px;
+    transition: 0.3s;
+}
+.menu-mobile.ativo .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.menu-mobile.ativo .line2{
+    opacity: 0;
+}
+.menu-mobile.ativo .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+header img[alt="Logo José Elétrica"]{
+    width: 90px;
+    border-radius: 0 0 30% 30%;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+header img[alt="Logo José Elétrica"]:hover{
+    background-color: cornsilk;
+}
+header li img{
+    width: 1.5rem;
+}
+header nav{
+    width: 45%;
+    padding-right: 1rem;
+}
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+}
+header nav a{
+    text-decoration: none;
+    color: var(--white);
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+header nav a:hover{
+    color: var(--first-color);
+    border-bottom: 2px solid var(--third-color);
+}
+header nav .redes-sociais{
+    padding: 5px 5px 1px 5px;
+    border-radius: 20%;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+header nav .redes-sociais:hover{
+    background-color: cornsilk;
+}
+header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes icones */
+    border: none;
+}
+/* #endregion */
+
+/* #region Banner */
+.banner{
+    background-image: url(../../img/pexels-egor-kamelev-813872.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--white);
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: var(--black);
+    display: flex;
+    padding: 5%;
+    align-items: center;
+}
+.banner .img-banner{
+    width: 50%;
+}
+.img-banner img{
+    width: 100%;
+}
+.banner .text-banner{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(1rem);
+    color: #fff;
+}
+.text-banner h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.text-banner h1::after{
+    transform: translateY(0.2rem);
+    display: block;
+    content: '';
+    border-radius: 3px;
+    width: 45%;
+    height: 4px;
+    background-color: var(--second-color);
+}
+.text-banner p{
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.text-banner button{
+	box-shadow: 3px 4px 0px 0px #1a81ad;
+    background-size: 300% 100%;
+	background:linear-gradient(to bottom, #ade1ff 5%, #52b5f2 100%);
+	background-color:#ade1ff;
+    border: none;
+    border-radius: 10px;
+	display:inline-block;
+	cursor:pointer;
+	font-family: var(--main-font);
+	font-size:16px;
+	padding:7px 25px;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.text-banner button:hover {
+    scale: 1.009;
+	background:linear-gradient(to bottom, #52b5f2 5%, #52b5f2 100%);
+	background-color:#52b5f2; 
+    color: #fff;
+}
+.text-banner button:active {
+	position:relative;
+	top:1px;
+}
+/* #endregion */
+
+/* #region Catálogo de Serviços */
+.catalogo{
+    background: #2A3133; /*var(--first-color);*/
+    text-align: center;
+    padding: 70px 10px;
+    width: 100vw;
+}
+.catalogo h1{
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 60px;
+}
+
+.box-content{
+    margin: 0 30px;
+    height: 100%;
+}
+
+.box-card{
+    display: flex;
+    height: 400px;    
+}
+
+.catalogo .box-card .cards{
+    border-radius: 6px;
+    background: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards .img{
+    border-radius: 6px;
+    width: 100%;
+    height: 180px;
+}
+.cards:nth-of-type(1) .img{
+    height: 180px;
+    background: url(../../img/instalacao-arcondicionado.jpeg);
+    background-position: 30% 25%;
+    background-size: 170%;
+    background-repeat: no-repeat;
+}
+/* .cards:nth-of-type(1) h2{
+    margin: 30px 0 20px 0;
+} */
+.cards:nth-of-type(2) .img{
+    background: url(../../img/limpeza-ar-condicionado.png);
+    background-position-x: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cards:nth-of-type(3) .img{
+    background: url(../../img/instalacao-eletrica.jpeg);
+    background-position-x: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cards:nth-of-type(4) .img{
+    background: url(../../img/manuntencao-eletrodomesticos.png);
+    background-position-y: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cards h2{
+    margin: auto 0;
+    font-size: 1.2rem;
+    padding: 0 5px;
+}
+/* .cards h2.font-lower{
+    font-size: 1.2rem;
+} */
+.cards h2+p{
+    font-size: 1rem;
+    margin: 0 15px auto 15px;
+}
+.cards button{
+    cursor: pointer;
+    font-family: var(--main-font);
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+    font-size: 0.9rem;
+    width: 100%;
+    outline: 0;
+    padding: 10px 10px;
+    border: none;
+    background: var(--third-color);/*#F2D905;*/
+    color: #33302A;
+    border-radius: 0 0 3px 3px;
+}
+.cards button:hover{
+    background-color: var(--first-color);
+}
+/* #endregion */
+
+/* #region Sobre */
+.sobre{
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-text{
+    font-family: var(--main-font);
+    width: 40%;
+    margin: 5%;
+    height: -webkit-fill-available;
+}
+.sobre-text h1{
+    font-size: 2rem;
+}
+.sobre-text p{
+    margin-top: 5%;
+    font-family: var(--text-font);
+    font-size: 1.03rem;
+}
+
+.sobre img{
+    width: 60%;
+    height: inherit;
+    border-radius: 5px 0 0 5px;
+}
+/* #endregion */
+
+/* #region Contato */
+.contato{
+    background-color: var(--third-color);
+    width: 100vw;
+    text-align: center;
+}
+.contato h1{
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+    padding: 30px;
+}
+/* .contato h1::after{
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    transform: translate(50vw, calc(60px + 10%));
+    border-radius: 50%;
+    width: 1px;
+    height: 200px;
+    background-color: var(--fifth-color); 
+}*/
+
+.contato .content{
+    padding: 50px 0;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: cornsilk;
+}
+.content img{
+    width: 50%;
+    height: fit-content;
+    align-self: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.content .send-email{
+    padding: 50px 20px;
+    width: 50%;
+}
+.send-email form{
+    width: 100%;
+    padding: 0 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.send-email textarea, input{
+    resize: none;
+    font-family: var(--text-font);
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    appearance: none;
+}
+.send-email textarea:focus, input:focus{/* Verificar dps */
+    border-color: var(--fifth-color);
+}
+.send-email .inputs{
+    width: 100%;
+    display: flex;
+}
+.send-email .inputs input#nome{
+    margin-right: 5px;
+}
+.send-email .inputs input+input{
+    margin-left: 5px;
+}
+.send-email input{
+    width: 100%;
+    padding: 5px 10px;
+}
+.send-email input::placeholder,textarea::placeholder{
+    color: #c4c4c4;
+}
+.send-email textarea{
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: -webkit-fill-available;
+    min-height: 200px;
+}
+.send-email .button{
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    background-color: var(--third-color);
+}
+.send-email .button:hover{
+    border: none;
+    padding: 10px;
+    background-color: var(--fourth-color);
+    color: #fff;
+}
+/* #endregion */
+
+/* #region Footer */
+footer{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    background-color: #2c2c2c;
+}
+
+footer .info-footer{
+    width: 100%;
+    margin-bottom: 35px;
+}
+footer .info-footer::after{
+    transform: translate(5vw, 0.4rem);
+    display: flex;
+    left: 0;
+    content: '';
+    border-radius: 5px;
+    width: 90vw;
+    height: 0.01rem;
+    background-color: var(--first-color);
+}
+
+.info-footer ul.informacoes-contato{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 0.7rem;
+}
+.info-footer ul img{
+    margin-right: 30px;
+}
+.info-footer a[href="#banner"]{
+    border: none;
+}
+.info-footer a[href="#banner"] img:hover{
+    scale: 1.01;
+}
+
+.info-footer a{
+    text-decoration: none;
+    color: #fff;
+    border-bottom: dotted 1px;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.info-footer a:hover{
+    color: var(--third-color);
+}
+.info-footer a:active{
+    color: var(--fourth-color);
+}
+
+.info-footer ul.informacoes-contato>li+li h3{
+    margin: 10px 0;
+}
+.info-footer ul.informacoes-contato>li+li h3::after{
+    transform: translateY(0.2rem);
+    display: block;
+    content: '';
+    border-radius: 3px;
+    width: 25%;
+    height: 2px;
+    background-color: var(--first-color);
+}
+
+.info-footer ul.informacoes-contato>li+li{
+    margin-top: 10px;
+}
+
+.info-footer ul.informacoes-contato h3{
+    margin-bottom: 1px;
+    font-family: var(--main-font);
+    font-weight: 300;
+}
+ul.lista-locais{
+    list-style-type: none;
+    display: flex;
+}
+ul.lista-locais li+li::before{
+    content: "; ";
+}
+.rigths{
+    font-size: 0.8rem;
+}
+/* #endregion */
+
+/* #region MediaQuery */
+/* Tablets */
+@media screen and (max-width: 950px) and (min-width: 661px){
+    :root{
+        font-size: 15px;
+    }
+    
+    /* Catalogo */
+    .box-content{
+        margin: 0 30px;
+    }
+    .box-card{
+        justify-content: normal;
+    }
+    .cards .img{
+        width: 100%;
+        height: 180px;
+    }
+    .cards h2{
+        margin: auto 0;
+    }
+    .cards h2 + p{
+        font-size: 0.93rem;
+        margin: 0 1px auto 1px;
+    }
+    .swiper-pagination{
+        bottom: auto !important;
+        transform: translateY(10px);
+    }
+    .swiper-pagination-bullet{
+        background: var(--swiper-pagination-bullet-inactive-color,#fff);
+    }
+
+    /* Sobre */
+    .sobre{
+        height: auto;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .sobre img{
+        width: 100%;
+        padding: 40px;
+    }
+    .sobre .sobre-text{
+        width: 100%;
+        padding: 0 40px 40px 40px;
+        margin: 0;
+    }
+    .sobre .sobre-text p{
+        margin-top: 2%;
+    }
+
+    /* Contato */
+    .send-email form{
+        height: auto;
+    }
+    .content .send-email{
+        padding: 10px;
+    }
+
+    /* Footer */
+    ul.lista-locais{
+        list-style-type: none;
+        display: block;
+    }
+    ul.lista-locais li+li::before{
+        content: "";
+    }
+    .info-footer ul img{
+        margin-right: 0;
+    }
+    .info-footer ul.informacoes-contato>li+li h3 {
+        letter-spacing: 1px;
+    }
+    .info-footer ul.informacoes-contato{
+        margin-bottom: 15px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 660px) {
+    /* Header */
+    header nav{
+        font-size: 1.5rem;
+        padding-right: 0;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100vw !important;
+        height: 90vh;
+        background: #000;
+        z-index: 100;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    header .nav-list.ativo{
+        transform: translateX(0);
+    }
+    header nav ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-items: center;
+        padding: 10%;
+        height: 100%;
+    }
+    nav ul li:nth-of-type(1){
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    nav ul li:nth-of-type(2){
+        grid-area: 2 / 1 / 3 / 3;;
+    }
+    nav ul li:nth-of-type(3){
+        grid-area: 3 / 1 / 4 / 3;;
+    }
+    nav ul li:nth-of-type(4){
+        grid-area: 4 / 1 / 5 / 2;
+        transform: translateX(40%);
+    }    
+    nav ul li:nth-of-type(5){
+        grid-area: 4 / 2 / 5 / 3; 
+        transform: translateX(-40%);
+    }
+    header nav ul li.redes-sociais img{
+        width: 50px;
+    }
+    header .menu-mobile{
+        display: block;
+    }
+    header .menu-mobile:hover{
+        background-color: cornsilk;
+        border-radius: 3px;
+    }
+    header .menu-mobile:hover div{
+        background: #000;
+    }
+
+    /* Banner */
+    .text-banner p{
+        font-size: 0.9rem;
+    }
+    .text-banner h1{
+        font-size: 2.3rem;
+    }
+
+    /* Catálogo */
+    .swiper-pagination{
+        bottom: auto !important;
+        transform: translateY(10px);
+        z-index: 1;
+    }
+    .cards h2+p{
+        font-size: 0.7rem;
+    }
+    .cards h2{
+        font-size: 1rem;
+    }
+    .cards button{
+        font-size: 0.8rem;
+    }
+
+    /* Sobre */
+    .sobre{
+        height: auto;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .sobre img{
+        width: 100%;
+        padding: 40px;
+    }
+    .sobre .sobre-text{
+        width: 100%;
+        padding: 0 40px 40px 40px;
+        margin: 0;
+    }
+    .sobre .sobre-text p{
+        margin-top: 2%;
+    }
+
+    /* Contato */
+    .contato .content{
+        background-image: url("../../img/eletrica01.jpg");
+        background-size: cover;
+        background-position: 30%;
+        padding: 80px 0;
+        flex-direction: column;
+    }
+    .contato h1{
+        font-size: 2rem;
+    }
+    .content img{
+        width: 100%;
+        border-radius: 0%;
+        opacity: 0;
+    }
+    .content .send-email{
+        position: absolute;
+        width: 90%;
+        padding: 0;
+        /* transform: translateY(-10%); */
+    }
+    .send-email form {
+        align-items: center;
+        height: auto;
+    }
+    .send-email .button{
+        font-weight: 700;
+        width: 100%;
+        color: black;
+    }
+    .send-email textarea, input{
+        color: white;
+        background: #000000c7;
+        font-size: 1.03rem;
+    }
+
+    /* Footer */
+    .info-footer ul img{
+        transform: translate(-10%, -15%);
+        margin: auto;
+    }
+    .info-footer ul.informacoes-contato{
+        flex-direction: column;
+        font-size: 0.9rem;
+        padding: 0 40px;
+    }
+    .info-footer ul.informacoes-contato>li:first-of-type{
+        height: 70px;
+    }
+    .info-footer ul.informacoes-contato>li:last-of-type br{
+        display: none;
+    }
+    
+    footer .info-footer::after{
+        transform: translate(8vw, 17px);
+        width: 80vw;
+    }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 430px){
+    /* Banner */
+    .banner {
+        background-position: -140vw;
+        padding: 0;
+    }
+    .banner .text-banner{
+        text-align: -webkit-center;
+        background: #0000008c;
+        padding: 30px;
+        width: 100%;
+        height: 95%;
+        justify-content: center;
+    }
+}
+
+/* #endregion */
+
+/* #region KeyFrames */
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes backAnim{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+/* #endregion */
