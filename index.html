@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-bt">
+<html lang="pt-br">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -77,8 +77,8 @@
                 <li><a href="#catalogo">Catálogo</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contatos</a></li>
-                <li class="redes-sociais"><a href="https://www.instagram.com/eletricistazito/" target="_blank"><img src="img/icons/instagram.png" width="10px"></a></li>
-                <li class="redes-sociais"><a href="https://wa.me/13997852489" target="_blank"><img src="img/icons/whatsapp.png" width="10px"></a></li>
+                <li class="redes-sociais"><a href="https://www.instagram.com/eletricistazito/" target="_blank"><img src="img/icons/instagram.png" alt="ícone do Instagram que direciona para o perfil da empresa"  width="10px"></a></li>
+                <li class="redes-sociais"><a href="https://wa.me/13997852489" target="_blank"><img src="img/icons/whatsapp.png" alt="ícone do WhatsApp que abre conversa para contato com a empresa"  width="10px"></a></li>
             </ul>
         </nav>
     </header>
@@ -98,7 +98,7 @@
         </section>
 
         <section id="catalogo" class="catalogo">
-            <h1> Catálogo de Serviços </h1>
+            <h2> Catálogo de Serviços </h2>
 
             <div id="box-content" class="box-content swiper">
                 <div id="box-card" class="box-card swiper-wrapper ">
@@ -141,13 +141,60 @@
 
         <section id="sobre" class="sobre">
             <div class="sobre-text">
-                <h1>Sobre</h1>
+                <h2>Sobre</h2>
                 <p>Ofereço serviços especializados em elétrica e refrigeração, priorizando a segurança e o bem-estar dos meus clientes. Na área elétrica, meu objetivo é proporcionar instalações seguras e confiáveis, garantindo que todos os sistemas estejam em perfeito funcionamento, livres de riscos. <br> <br> Já na refrigeração, meu foco está em assegurar que os aparelhos operem de maneira eficiente, proporcionando não apenas refrigeração ideal, mas também a preservação dos alimentos e um ambiente confortável. Minha abordagem busca não apenas resolver problemas imediatos, mas também promover a qualidade de vida e a tranquilidade dos clientes, oferecendo soluções duradouras e de alta qualidade.</p>
             </div>
-            <img src="img/foto-arcondicionado03.jpg" width="300" height="300" alt="" loading="lazy">
+            <img src="img/foto-arcondicionado03.jpg" width="300" height="300" alt="foto de técnico realizando manutenção em ar-condicionado instalado em ambiente interno"  loading="lazy">
         </section>
 
         <section id="contato" class="contato">
+
+            <h2>Entre em Contato:</h1>
+
+            <div class="content">                
+                <img src="img/eletrica01.jpg" alt="foto de lâmpada acesa em ambiente escuro representando serviço de instalação elétrica" width="500" loading="lazy">
+
+                <div class="send-email">
+                    <form method="post" action="https://formsubmit.co/eletricistazito@gmail.com">
+                        <fieldset>
+                            <legend>Formulário de contato</legend>
+                            <div class="inputs">
+                            
+                                
+                                <label for="nome">Nome completo</label>
+                                <input id="nome"  name="nome" type="text" required autocomplete="name"  >
+
+                                <!-- EMAIL -->
+                                <label for="email">E-mail</label>
+                                <input id="email" name="email" type="email" required autocomplete="email">
+
+                                <!-- TELEFONE -->
+                                <label for="telefone">Telefone</label>
+                                <input id="telefone" name="telefone" type="tel" required autocomplete="tel" pattern="[0-9]{10,11}"  aria-describedby="telefone-ajuda">
+
+                                <small id="telefone-ajuda">
+                                    Digite apenas números (DDD + número)
+                                </small>
+
+                            </div>
+
+                            <!-- MENSAGEM -->
+                            <label for="msg">Mensagem</label>
+                            <textarea id="msg" name="mensagem" required></textarea>
+                            <!-- BOTÃO -->
+                            <button type="submit" class="button">
+                                Enviar mensagem
+                            </button>
+                        </fieldset>
+                        <input type="hidden" name="_subject" value="Nova mensagem vinda pelo website!">
+                    </form>
+                </div>          
+                
+            </div>
+
+        </section> 
+
+        <!-- <section id="contato" class="contato">
 
             <h1>Entre em Contato:</h1>
 
@@ -170,14 +217,14 @@
                 </div>             
                 
             </div>
-        </section>
+        </section> -->
 
         <footer>
             <div class="info-footer">
                 <ul class="informacoes-contato">
                     <li>
                         <a href="#banner">
-                            <img src="img/logos/jsOfcLateralPretoSfundo.png" alt="José Elétrica e Refrigeração Logo Lateral" width="200" loading="lazy">
+                            <img src="img/logos/jsOfcLateralPretoSfundo.png" alt="logotipo da empresa JS Elétrica e Refrigeração em fundo transparente" width="200" loading="lazy">
                         </a>
                     </li>
                     <li>
