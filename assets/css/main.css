@@ -206,7 +206,7 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     padding: 70px 10px;
     width: 100vw;
 }
-.catalogo h1{
+.catalogo h2{
     color: white;
     font-size: 2rem;
     letter-spacing: 1.5px;
@@ -309,7 +309,7 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     margin: 5%;
     height: -webkit-fill-available;
 }
-.sobre-text h1{
+.sobre-text h2{
     font-size: 2rem;
 }
 .sobre-text p{
@@ -331,7 +331,7 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     width: 100vw;
     text-align: center;
 }
-.contato h1{
+.contato h2{
     font-size: 2.2rem;
     letter-spacing: 0.2rem;
     padding: 30px;
@@ -367,14 +367,105 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     padding: 50px 20px;
     width: 50%;
 }
-.send-email form{
+/* .send-email form{
     width: 100%;
     padding: 0 20px;
     height: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+} */
+
+.send-email form{
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
 }
+
+.send-email fieldset{
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.send-email legend{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* AGRUPAMENTO */
+.send-email .inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* LABEL */
+.send-email label{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-align: left;
+}
+
+
+/* INPUTS E TEXTAREA */
+.send-email input,
+.send-email textarea{
+    width: 100%;
+    padding: 10px;
+    font-family: var(--text-font);
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+
+/* FOCO (acessibilidade visual) */
+.send-email input:focus,
+.send-email textarea:focus{
+    outline: none;
+    border-color:#F29F05;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+}
+
+/* AJUDA */
+.send-email small{
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+    text-align: left;
+}
+
+/* TEXTAREA */
+.send-email textarea{
+    margin-top: 15px;
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* BOTÃO */
+.send-email .button{
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    background-color: var(--third-color);
+    transition: 0.2s;
+}
+
+.send-email .button:hover{
+    background-color: var(--fourth-color);
+    color: #fff;
+}
+
+/* 
 .send-email textarea, input{
     resize: none;
     font-family: var(--text-font);
@@ -382,7 +473,7 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     border-radius: 3px;
     appearance: none;
 }
-.send-email textarea:focus, input:focus{/* Verificar dps */
+.send-email textarea:focus, input:focus{
     border-color: var(--fifth-color);
 }
 .send-email .inputs{
@@ -426,7 +517,7 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     padding: 10px;
     background-color: var(--fourth-color);
     color: #fff;
-}
+} */
 /* #endregion */
 
 /* #region Footer */
