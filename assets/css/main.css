@@ -149,13 +149,30 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
 .img-banner img{
     width: 100%;
 }
+
 .banner .text-banner{
     width: 50%;
     display: flex;
     flex-direction: column;
     transform: translateY(1rem);
     color: #fff;
+    justify-content: flex-start;
 }
+
+.text-banner{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(49, 73, 91, 0.6);   
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: left;
+    margin-left: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
 .text-banner h1{
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -264,7 +281,9 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .cards h2{
+    color: black;
     margin: auto 0;
     font-size: 1.2rem;
     padding: 0 5px;
@@ -465,6 +484,10 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     color: #fff;
 }
 
+label b {
+    color: #511F1F;
+}
+
 /* 
 .send-email textarea, input{
     resize: none;
@@ -621,6 +644,8 @@ ul.lista-locais li+li::before{
     }
     .box-card{
         justify-content: normal;
+        height: auto; /* tira altura fixa */
+        gap: 15px;
     }
     .cards .img{
         width: 100%;
@@ -761,6 +786,7 @@ ul.lista-locais li+li::before{
         transform: translateY(10px);
         z-index: 1;
     }
+    
     .cards h2+p{
         font-size: 0.7rem;
     }
