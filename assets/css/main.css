@@ -149,13 +149,30 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
 .img-banner img{
     width: 100%;
 }
+
 .banner .text-banner{
     width: 50%;
     display: flex;
     flex-direction: column;
     transform: translateY(1rem);
     color: #fff;
+    justify-content: flex-start;
 }
+
+.text-banner{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(49, 73, 91, 0.6);   
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: left;
+    margin-left: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
 .text-banner h1{
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -264,7 +281,9 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .cards h2{
+    color: black;
     margin: auto 0;
     font-size: 1.2rem;
     padding: 0 5px;
@@ -465,6 +484,10 @@ header nav .redes-sociais:hover>a{ /* Tirar o problema do border bottom nestes i
     color: #fff;
 }
 
+label b {
+    color: #511F1F;
+}
+
 /* 
 .send-email textarea, input{
     resize: none;
@@ -621,6 +644,8 @@ ul.lista-locais li+li::before{
     }
     .box-card{
         justify-content: normal;
+        height: auto; /* tira altura fixa */
+        gap: 15px;
     }
     .cards .img{
         width: 100%;
@@ -748,12 +773,39 @@ ul.lista-locais li+li::before{
     }
 
     /* Banner */
+    .banner{
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text-banner{
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .text-banner h1{
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
     .text-banner p{
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .text-banner button{
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px;
+    }
+    /* .text-banner p{
         font-size: 0.9rem;
     }
     .text-banner h1{
         font-size: 2.3rem;
-    }
+    } */
 
     /* Catálogo */
     .swiper-pagination{
@@ -761,6 +813,7 @@ ul.lista-locais li+li::before{
         transform: translateY(10px);
         z-index: 1;
     }
+    
     .cards h2+p{
         font-size: 0.7rem;
     }
@@ -792,11 +845,17 @@ ul.lista-locais li+li::before{
 
     /* Contato */
     .contato .content{
+        position: relative;
         background-image: url("../../img/eletrica01.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 60px 15px;
+        flex-direction: column;
+        /* background-image: url("../../img/eletrica01.jpg");
         background-size: cover;
         background-position: 30%;
         padding: 80px 0;
-        flex-direction: column;
+        flex-direction: column; */
     }
     .contato h1{
         font-size: 2rem;
@@ -807,12 +866,45 @@ ul.lista-locais li+li::before{
         opacity: 0;
     }
     .content .send-email{
-        position: absolute;
+        position: static; 
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(0,0,0,0.7); 
+        border-radius: 8px;
+        /* position: absolute;
         width: 90%;
-        padding: 0;
+        padding: 0; */
         /* transform: translateY(-10%); */
     }
-    .send-email form {
+
+    .send-email input,
+    .send-email textarea  {
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .send-email label,
+    .send-email legend{
+         color: #fff;
+    }
+
+    .send-email input::placeholder,
+    .send-email textarea::placeholder{
+        color: rgba(255,255,255,0.7);
+    }
+
+.send-email .button{
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    background-color: var(--third-color);
+    color: #000;
+    border-radius: 4px;
+}
+    /* .send-email form {
         align-items: center;
         height: auto;
     }
@@ -825,7 +917,7 @@ ul.lista-locais li+li::before{
         color: white;
         background: #000000c7;
         font-size: 1.03rem;
-    }
+    } */
 
     /* Footer */
     .info-footer ul img{
