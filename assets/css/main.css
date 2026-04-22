@@ -773,12 +773,39 @@ ul.lista-locais li+li::before{
     }
 
     /* Banner */
+    .banner{
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text-banner{
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .text-banner h1{
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
     .text-banner p{
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .text-banner button{
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px;
+    }
+    /* .text-banner p{
         font-size: 0.9rem;
     }
     .text-banner h1{
         font-size: 2.3rem;
-    }
+    } */
 
     /* Catálogo */
     .swiper-pagination{
