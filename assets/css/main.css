@@ -818,11 +818,17 @@ ul.lista-locais li+li::before{
 
     /* Contato */
     .contato .content{
+        position: relative;
         background-image: url("../../img/eletrica01.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 60px 15px;
+        flex-direction: column;
+        /* background-image: url("../../img/eletrica01.jpg");
         background-size: cover;
         background-position: 30%;
         padding: 80px 0;
-        flex-direction: column;
+        flex-direction: column; */
     }
     .contato h1{
         font-size: 2rem;
@@ -833,12 +839,45 @@ ul.lista-locais li+li::before{
         opacity: 0;
     }
     .content .send-email{
-        position: absolute;
+        position: static; 
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(0,0,0,0.7); 
+        border-radius: 8px;
+        /* position: absolute;
         width: 90%;
-        padding: 0;
+        padding: 0; */
         /* transform: translateY(-10%); */
     }
-    .send-email form {
+
+    .send-email input,
+    .send-email textarea  {
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .send-email label,
+    .send-email legend{
+         color: #fff;
+    }
+
+    .send-email input::placeholder,
+    .send-email textarea::placeholder{
+        color: rgba(255,255,255,0.7);
+    }
+
+.send-email .button{
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    background-color: var(--third-color);
+    color: #000;
+    border-radius: 4px;
+}
+    /* .send-email form {
         align-items: center;
         height: auto;
     }
@@ -851,7 +890,7 @@ ul.lista-locais li+li::before{
         color: white;
         background: #000000c7;
         font-size: 1.03rem;
-    }
+    } */
 
     /* Footer */
     .info-footer ul img{
