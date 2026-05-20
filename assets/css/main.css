@@ -631,6 +631,298 @@ ul.lista-locais li+li::before{
 }
 /* #endregion */
 
+/* #region Acessibilidade */
+.acessibilidade{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+}
+
+.btn-acessibilidade{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: #004aad;
+    color: white;
+}
+
+.menu-acessibilidade{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.menu-acessibilidade.ativo{
+    display: flex;
+}
+
+.menu-acessibilidade button{
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* MODO ESCURO  */
+
+.modo-escuro{
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
+}
+
+/* FUNDO GERAL */
+.modo-escuro main,
+.modo-escuro section,
+.modo-escuro .sobre,
+.modo-escuro .contato .content{
+    background: #181818 !important;
+    color: #f1f1f1 !important;
+}
+
+/* HEADER */
+.modo-escuro header,
+.modo-escuro header.ativo{
+    background: #0f0f0f !important;
+}
+
+/* LINKS */
+.modo-escuro a{
+    color: #8ecbff !important;
+}
+
+.modo-escuro a:hover{
+    color: #ffd22a !important;
+}
+
+/* TITULOS E TEXTOS */
+.modo-escuro h1,
+.modo-escuro h2,
+.modo-escuro h3,
+.modo-escuro p,
+.modo-escuro span,
+.modo-escuro label,
+.modo-escuro legend,
+.modo-escuro small,
+.modo-escuro li{
+    color: #f1f1f1 !important;
+}
+
+/* BANNER */
+.modo-escuro .text-banner{
+    background: rgba(0,0,0,0.75) !important;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* CATÁLOGO */
+.modo-escuro .catalogo{
+    background: #101010 !important;
+}
+
+.modo-escuro .cards{
+    background: #222 !important;
+    color: #fff !important;
+    border: 1px solid #333;
+}
+
+.modo-escuro .cards h2,
+.modo-escuro .cards p{
+    color: #fff !important;
+}
+
+/* BOTÕES */
+.modo-escuro button,
+.modo-escuro .button{
+    background: #ffd22a !important;
+    color: #000 !important;
+    border: none;
+}
+
+.modo-escuro button:hover,
+.modo-escuro .button:hover{
+    background: #ffb700 !important;
+    color: #000 !important;
+}
+
+/* FORMULÁRIO */
+.modo-escuro .send-email{
+    background: #1e1e1e !important;
+}
+
+.modo-escuro input,
+.modo-escuro textarea{
+    background: #2a2a2a !important;
+    color: #fff !important;
+    border: 1px solid #555 !important;
+}
+
+.modo-escuro label b {
+    color: yellow;
+    
+}
+
+.modo-escuro input::placeholder,
+.modo-escuro textarea::placeholder{
+    color: #cfcfcf !important;
+}
+
+.modo-escuro input:focus,
+.modo-escuro textarea:focus{
+    border-color: #ffd22a !important;
+    box-shadow: 0 0 0 2px rgba(255,210,42,0.3);
+}
+
+/* FOOTER */
+.modo-escuro footer{
+    background: #0d0d0d !important;
+    color: #f1f1f1 !important;
+}
+
+/* MENU ACESSIBILIDADE */
+.modo-escuro .menu-acessibilidade{
+    background: #222 !important;
+}
+
+.modo-escuro .menu-acessibilidade button{
+    background: #333 !important;
+    color: #fff !important;
+}
+
+.modo-escuro .menu-acessibilidade button:hover{
+    background: #444 !important;
+}
+
+
+/* ALTO CONTRASTE */
+
+
+.alto-contraste,
+.alto-contraste main,
+.alto-contraste section,
+.alto-contraste footer,
+.alto-contraste header{
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* TEXTOS */
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste p,
+.alto-contraste span,
+.alto-contraste li {
+    color: #fff !important;
+}
+
+.alto-contraste label,
+.alto-contraste legend,
+.alto-contraste small {
+    color: black !important;
+}
+
+/* LINKS */
+.alto-contraste a{
+    color: #00ffff !important;
+    text-decoration: underline !important;
+}
+
+/* CARDS */
+.alto-contraste .cards{
+    background: #000 !important;
+    border: 2px solid #fff !important;
+}
+
+.alto-contraste .cards h2,
+.alto-contraste .cards p{
+    color: #fff !important;
+}
+
+/* BOTÕES */
+.alto-contraste button,
+.alto-contraste .button{
+    background: #ffff00 !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+    font-weight: bold;
+}
+
+.alto-contraste button:hover,
+.alto-contraste .button:hover{
+    background: #fff !important;
+    color: #000 !important;
+}
+
+/* FORMULÁRIOS */
+.alto-contraste input,
+.alto-contraste textarea{
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+.alto-contraste  .content  {
+    color: #030303;
+    background-color: #f4f9ff;
+}
+
+.alto-contraste label b {
+    color: rgb(116, 5, 5);
+    
+}
+
+.alto-constraste #telefone-ajuda {
+    color: black;
+}
+
+.alto-contraste input::placeholder,
+.alto-contraste textarea::placeholder{
+    color: #ccc !important;
+}
+
+/* FOCO */
+.alto-contraste *:focus{
+    outline: 3px solid #00ffff !important;
+    outline-offset: 3px;
+}
+
+/* MENU ACESSIBILIDADE */
+.alto-contraste .menu-acessibilidade{
+    background: #000 !important;
+    border: 2px solid #fff;
+}
+
+.alto-contraste .menu-acessibilidade button{
+    background: #000 !important;
+    color: #fff !important;
+    border: 1px solid #fff;
+}
+
+/* SWIPER */
+.alto-contraste .swiper-pagination-bullet{
+    background: #fff !important;
+}
+
+.destacar-links a{
+    border: 2px solid rgb(0, 140, 255);
+    background: black;
+}
+
+.sem-animacao *{
+    animation: none !important;
+    transition: none !important;
+}
+
 /* #region MediaQuery */
 /* Tablets */
 @media screen and (max-width: 950px) and (min-width: 661px){

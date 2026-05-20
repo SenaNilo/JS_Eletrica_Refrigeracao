@@ -144,8 +144,7 @@
                 <h2>Sobre</h2>
                 <p>Ofereço serviços especializados em elétrica e refrigeração, priorizando a segurança e o bem-estar dos meus clientes. Na área elétrica, meu objetivo é proporcionar instalações seguras e confiáveis, garantindo que todos os sistemas estejam em perfeito funcionamento, livres de riscos. <br> <br> Já na refrigeração, meu foco está em assegurar que os aparelhos operem de maneira eficiente, proporcionando não apenas refrigeração ideal, mas também a preservação dos alimentos e um ambiente confortável. Minha abordagem busca não apenas resolver problemas imediatos, mas também promover a qualidade de vida e a tranquilidade dos clientes, oferecendo soluções duradouras e de alta qualidade.</p>
             </div>
-            <img src="img/foto-arcondicionado03.jpg" width="300" height="300" alt="A imagem mostra um ambiente interno moderno, 
-                com estilo contemporâneo e um toque industrial." loading="lazy">
+            <img src="img/foto-arcondicionado03.jpg" width="300" height="300" alt="A imagem mostra um ambiente interno moderno com um ar condicionado instalado no teto." loading="lazy">
         </section>
 
         <section id="contato" class="contato">
@@ -190,6 +189,33 @@
                 
             </div>
         </section> 
+
+        <div class="acessibilidade">
+
+            <button class="btn-acessibilidade" id="toggle-acessibilidade">
+                ♿
+            </button>
+
+            <div class="menu-acessibilidade" id="menu-acessibilidade">
+                <button onclick="aumentarFonte()">>A+ Aumentar fonte</button>
+                <button onclick="diminuirFonte()">A- Diminuir fonte</button>
+                <button onclick="autoContraste()">◐ Alto contraste</button>
+                <button onclick="modoEscuro()">🌙 Modo escuro</button>
+                <button onclick="destacarLinks()">🔗 Destacar links</button>
+                <!-- <button onclick="PausarAnimacoes()">⏸ Pausar animações</button> -->
+                <button onclick="resetarAcessibilidade()">↺ Resetar</button>
+            </div>
+
+        </div>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
+
 
         <!-- <section id="contato" class="contato">
 
@@ -260,5 +286,11 @@
 
         <!-- Initialize Swiper -->
         <script src="assets/js/main.js"></script>
+
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
 </html>

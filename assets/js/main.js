@@ -67,3 +67,52 @@ function backHeader(){
         header.classList.add("ativo");
     }
 }
+
+
+const toggle = document.getElementById("toggle-acessibilidade");
+const menu = document.getElementById("menu-acessibilidade");
+
+toggle.addEventListener("click",  () =>{
+    menu.classList.toggle("ativo");
+});
+
+let tamanhoFonte = 100;
+
+function aumentarFonte() {
+    tamanhoFonte += 10;
+    document.documentElement.style.fontSize = tamanhoFonte + "%";
+}
+
+function diminuirFonte() {
+    tamanhoFonte -=10;
+    document.documentElement.style.fontSize = tamanhoFonte + "%";
+}
+
+function autoContraste(){
+    document.body.classList.toggle("alto-contraste");
+}
+
+function modoEscuro() {
+    document.body.classList.toggle("modo-escuro");
+}
+
+function destacarLinks(){
+    document.body.classList.toggle("destacar-links");
+}
+
+function pausarAnimacoes(){
+    document.body.classList.toggle("sem-animacao");
+}
+
+function resetarAcessibilidade(){
+    tamanhoFonte = 100;
+
+    document.documentElement.style.fontSize = "100%";
+
+    document.body.classList.remove(
+        "alto-contraste",
+        "modo-escuro",
+        "destacar-links",
+        "sem-animacao"
+    );
+}
