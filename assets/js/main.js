@@ -72,18 +72,16 @@ function backHeader(){
 const toggle = document.getElementById("toggle-acessibilidade");
 const menu = document.getElementById("menu-acessibilidade");
 
-// toggle.addEventListener("click",  () =>{
-//     menu.classList.toggle("ativo");
-// });
-
 toggle.addEventListener("click", () => {
 
     menu.classList.toggle("ativo");
 
-    if(menu.classList.contains("ativo")){
-        menu.setAttribute("aria-expanded", "true");
+    if (menu.classList.contains("ativo")) {
+        toggle.setAttribute("aria-expanded", "true");
+        menu.setAttribute("aria-hidden", "false");
     } else {
-        menu.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-hidden", "true");
     }
 });
 
