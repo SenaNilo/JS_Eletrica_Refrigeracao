@@ -72,8 +72,19 @@ function backHeader(){
 const toggle = document.getElementById("toggle-acessibilidade");
 const menu = document.getElementById("menu-acessibilidade");
 
-toggle.addEventListener("click",  () =>{
+// toggle.addEventListener("click",  () =>{
+//     menu.classList.toggle("ativo");
+// });
+
+toggle.addEventListener("click", () => {
+
     menu.classList.toggle("ativo");
+
+    if(menu.classList.contains("ativo")){
+        menu.setAttribute("aria-expanded", "true");
+    } else {
+        menu.setAttribute("aria-expanded", "false");
+    }
 });
 
 let tamanhoFonte = 100;
@@ -100,9 +111,6 @@ function destacarLinks(){
     document.body.classList.toggle("destacar-links");
 }
 
-function pausarAnimacoes(){
-    document.body.classList.toggle("sem-animacao");
-}
 
 function resetarAcessibilidade(){
     tamanhoFonte = 100;
