@@ -63,11 +63,17 @@
    
 </head>
 <body>
+    <a href="#conteudo-principal" class="skip-link">
+        Aperte na tecla "Espaço" no seu teclado para pular para o conteúdo principal
+    </a>
+    
     <header>
         <a href="#banner">
             <img src="img/logos/logoJs-sFundo.png" alt="logotipo da empresa JS Elétrica e Refrigeração em fundo transparente"  width="100" loading="lazy">
         </a>
-        <div class="menu-mobile" onclick="backHeader()">
+        <div class="menu-mobile" onclick="backHeader()" aria-label="Abrir menu mobile"
+            aria-expanded="false"
+            aria-controls="menu-mobile">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -82,8 +88,8 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="banner" class="banner">
+    <main id="conteudo-principal">
+        <section id="banner" class="banner" tabindex="0">
             <div class="text-banner">
                 <h1>JS Elétrica e Refrigeração</h1>
                 <p>O padrão ouro em serviços em que você pode confiar e contratar para garantir excelência e qualidade em todos os detalhes.</p>
@@ -97,12 +103,12 @@
         
         </section>
 
-        <section id="catalogo" class="catalogo">
+        <section id="catalogo" class="catalogo" tabindex="0">
             <h2> Catálogo de Serviços </h2>
 
             <div id="box-content" class="box-content swiper">
                 <div id="box-card" class="box-card swiper-wrapper ">
-                    <div class="cards swiper-slide">
+                    <div class="cards swiper-slide" tabindex="0">
                         <div class="img"></div>
                         <!-- <img src="img/instalacao-ar-condicionado.jpeg" alt="Evaporadora instalada com sucesso" loading="lazy" width="200" height="200"> -->
                         <h2>Instalação De Ar-Condicionado</h2>
@@ -110,7 +116,7 @@
                         
                         <button onclick="window.location.href='https://wa.me/13997852489?text=Olá, vim pelo site e desejo instalar um Ar-Condicionado, qual seria o seu orçamento?'">Preciso deste serviço!</button> <!-- levar para o zap com a mensagem do devido serviço -->
                     </div>
-                    <div class="cards swiper-slide">
+                    <div class="cards swiper-slide" tabindex="0">
                         <div class="img"></div>
                         <!-- <img src="img/limpeza-ar-condicionado.png" alt="Condensadora limpa e funcionando corretamente" loading="lazy" width="200" height="200"> -->
                         <h2>Limpeza Ar-Condicionado</h2>
@@ -118,7 +124,7 @@
                         
                         <button onclick="window.location.href='https://wa.me/13997852489?text=Olá, vim pelo site e desejo limpar o meu Ar-Condicionado, qual seria o seu preço?'">Preciso deste serviço!</button>
                     </div>
-                    <div class="cards swiper-slide">
+                    <div class="cards swiper-slide" tabindex="0">
                         <div class="img"></div>
                         <!-- <img src="img/instalacao-eletrica.jpeg" alt="Quadro de luz completo e organizado" loading="lazy" width="200" height="200"> -->
                         <h2>Instalações Elétrica</h2>
@@ -126,7 +132,7 @@
                         
                         <button onclick="window.location.href='https://wa.me/13997852489?text=Olá, vim pelo site e busco seu serviço de elétrica em minha casa/empresa, qual seria seu orçamento?'">Preciso deste serviço!</button>
                     </div>
-                    <div class="cards swiper-slide">
+                    <div class="cards swiper-slide" tabindex="0">
                         <div class="img"></div>
                         <!-- <img src="img/manuntancao-eletrodomestico.jpg" alt="Máquina de lavar e Geladeira depois da Manuntenção" loading="lazy" width="200" height="150"> -->
                         <h2>Manuntenção de Eletro-Domésticos</h2>
@@ -139,8 +145,8 @@
             <div class="swiper-pagination"></div>
         </section>
 
-        <section id="sobre" class="sobre">
-            <div class="sobre-text">
+        <section id="sobre" class="sobre" tabindex="0">
+            <div class="sobre-text" tabindex="0">
                 <h2>Sobre</h2>
                 <p>Ofereço serviços especializados em elétrica e refrigeração, priorizando a segurança e o bem-estar dos meus clientes. Na área elétrica, meu objetivo é proporcionar instalações seguras e confiáveis, garantindo que todos os sistemas estejam em perfeito funcionamento, livres de riscos. <br> <br> Já na refrigeração, meu foco está em assegurar que os aparelhos operem de maneira eficiente, proporcionando não apenas refrigeração ideal, mas também a preservação dos alimentos e um ambiente confortável. Minha abordagem busca não apenas resolver problemas imediatos, mas também promover a qualidade de vida e a tranquilidade dos clientes, oferecendo soluções duradouras e de alta qualidade.</p>
             </div>
@@ -192,11 +198,14 @@
 
         <div class="acessibilidade">
 
-            <button class="btn-acessibilidade" id="toggle-acessibilidade">
+            <button class="btn-acessibilidade" id="toggle-acessibilidade"  class="btn-acessibilidade"
+                aria-label="Abrir menu de acessibilidade"
+                aria-expanded="false"
+                aria-controls="menu-acessibilidade">                
                 ♿
             </button>
 
-            <div class="menu-acessibilidade" id="menu-acessibilidade">
+            <div class="menu-acessibilidade" id="menu-acessibilidade" role="menu">
                 <button onclick="aumentarFonte()">>A+ Aumentar fonte</button>
                 <button onclick="diminuirFonte()">A- Diminuir fonte</button>
                 <button onclick="autoContraste()">◐ Alto contraste</button>
