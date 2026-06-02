@@ -41,6 +41,35 @@ h1, h2{
     font-family: var(--main-font);
 }
 
+.skip-link{
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.skip-link:focus{
+    left: 10px;
+}
+
+section:focus{
+    outline: 3px solid #F29F05;
+    outline-offset: 5px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #52B5F2;
+    outline-offset: 3px;
+     box-shadow: 0 0 0 5px rgba(255, 210, 42, 0.3);
+}
+
 /* #region Header */
 header{
     background: linear-gradient(#000, transparent);
@@ -657,7 +686,7 @@ ul.lista-locais li+li::before{
     position: absolute;
     bottom: 70px;
     right: 0;
-    background: white;
+    background: rgb(138, 136, 136);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
